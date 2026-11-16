@@ -1,0 +1,13 @@
+{
+ "name": "real_v2_01",
+ "tag": "train",
+ "notes": "network training frames (real_v2): F still, M moved by hand - close, far, edges, strong tilts, in-plane rotation, free; F fixed at 41 cm from the lens",
+ "distance_cm": null,
+ "tilt_deg": null,
+ "resolution": "1280x720",
+ "frames": 1075,
+ "duration_s": 36.0,
+ "fps": 29.86,
+ "dictionary": "DICT_6X6_250",
+ "created": "2026-11-15T20:51:40"
+}

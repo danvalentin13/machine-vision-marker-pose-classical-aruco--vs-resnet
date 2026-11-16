@@ -1,0 +1,13 @@
+{
+ "name": "E7_box_slow",
+ "tag": "E7_occlusion",
+ "notes": "LAYOUT 2: M start with its right black edge 248 mm from F's left black edge (centre to centre 325 mm), end stop ~20 mm gap between the black squares (travel ~228 mm); obstacle: light-bulb box (7 cm wide) in front of the ruler, ~5 cm visible run-up before it covers M, M not readable over ~16 cm; guided by the moving outline: 2.5 s per pass = 9 cm/s; camera ~60 cm from F; bonus E7: F still, M slides along the ruler from the left stop to the right stop (rest - slide - rest), several passes",
+ "distance_cm": null,
+ "tilt_deg": null,
+ "resolution": "1280x720",
+ "frames": 2251,
+ "duration_s": 75.02,
+ "fps": 30.01,
+ "dictionary": "DICT_6X6_250",
+ "created": "2026-11-16T18:07:37"
+}

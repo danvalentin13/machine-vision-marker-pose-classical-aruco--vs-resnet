@@ -1,0 +1,7 @@
+{
+ "dictionary": "DICT_6X6_250",
+ "id_fixed": 0,
+ "id_moving": 23,
+ "nominal_side_mm": 80.0,
+ "quiet_zone_cells": 2
+}

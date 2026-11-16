@@ -1,0 +1,21 @@
+{
+ "name": "E2_d75_t0",
+ "tag": "E2_dist_tilt",
+ "notes": "camera ~75 cm from F, M facing the camera (0 deg); M on its own support in front of F: s 115 mm along the board, n 90 mm in front of F's surface, centre 20 mm lower (ruler); camera estimate of the distance to F: 76.7 cm",
+ "distance_cm": 75.0,
+ "tilt_deg": 0.0,
+ "resolution": "1280x720",
+ "frames": 100,
+ "duration_s": 3.33,
+ "fps": 30.06,
+ "dictionary": "DICT_6X6_250",
+ "created": "2026-11-16T20:21:58",
+ "camera_check": [
+  -121.7,
+  -24.0,
+  93.8,
+  4.1,
+  -1.8,
+  0.4
+ ]
+}

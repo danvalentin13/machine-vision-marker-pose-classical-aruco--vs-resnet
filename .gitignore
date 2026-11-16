@@ -1,0 +1,62 @@
+# PRIVACY RULE OF THIS REPOSITORY
+# No camera picture is published: every recording, frame, screenshot and video made with the camera shows a person or a room.
+# All media and binary files are therefore ignored by default; only files that are computer-generated (markers, plots,
+# rendered synthetic images, camera-free animations) are listed explicitly below.
+
+# --- environment / caches
+.venv/
+__pycache__/
+*.pyc
+
+# --- every media / binary type is ignored unless listed in the allow-list below
+*.avi
+*.mp4
+*.gif
+*.png
+*.jpg
+*.jpeg
+*.bmp
+*.npy
+*.npz
+*.pt
+*.pdf
+
+# --- camera data, large data and course material
+training/synthetic/
+training/models/
+training/real/
+training/real_v*/*
+!training/real_v*/*.json
+!training/real_v*/INSTRUCTIONS.md
+data/calibration/images/
+data/recordings/_discarded/
+data/lecture_reference/
+code/lecture_reference/
+output/evaluation/worst/
+output/evaluation/t6_live.*
+output/bonus/setup_live.*
+output/detection/guided/*.avi
+
+# --- allow-list: computer-generated files only (each one checked: no person, no room)
+!output/public/*.mp4
+!output/public/*.gif
+!output/markers/*.png
+!output/dictionary/dictionary_sheet.pdf
+!output/dictionary/sheet/*.png
+!output/print/*.png
+!output/print/print_sheet.pdf
+!output/calibration/*.png
+!output/pose/invariance_1_invariance.png
+!output/network/*/training_curves.png
+!output/network/resnet18_v1/dashboard.png
+!output/network/resnet18_v2/dashboard.png
+!output/network/resnet18_v3/dashboard.png
+!output/network/crop_resnet18_v1/dashboard.png
+!output/network/synth_v1/examples.png
+!output/network/crop_v1/examples.png
+!output/evaluation/E3_*.png
+!output/evaluation/what_to_measure_turned_M.png
+!output/bonus/*_passes.png
+!output/bonus/real_occlusion.png
+!output/bonus/virtual_occlusion.png
+!data/calibration/camera.npz

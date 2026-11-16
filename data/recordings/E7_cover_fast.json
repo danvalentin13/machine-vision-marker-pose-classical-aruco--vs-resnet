@@ -1,0 +1,13 @@
+{
+ "name": "E7_cover_fast",
+ "tag": "E7_occlusion",
+ "notes": "REAL obstacle: tin box in front of the ruler (M hidden from ruler ~90 to ~265 mm); paced with the on-screen bar and beeps: 2.0 s per pass (~14-16 cm/s), gentle start; ruler: M left corner at 0 at the start, F left edge at 377 mm, camera ~59 cm from F; bonus E7: F still, M slides along the ruler from the left stop to the right stop (rest - slide - rest), several passes",
+ "distance_cm": null,
+ "tilt_deg": null,
+ "resolution": "1280x720",
+ "frames": 1801,
+ "duration_s": 60.03,
+ "fps": 30.0,
+ "dictionary": "DICT_6X6_250",
+ "created": "2026-11-16T17:24:57"
+}

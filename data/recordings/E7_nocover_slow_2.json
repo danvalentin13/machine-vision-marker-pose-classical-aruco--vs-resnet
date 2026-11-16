@@ -1,0 +1,13 @@
+{
+ "name": "E7_nocover_slow_2",
+ "tag": "E7_occlusion",
+ "notes": "no obstacle, slow passes (target ~10 cm/s: the 28 cm in about 3 s); ruler: M left corner at 0 at the start, F left edge at 377 mm, camera ~58 cm from F; bonus E7: F still, M slides along the ruler from the left stop to the right stop (rest - slide - rest), several passes",
+ "distance_cm": null,
+ "tilt_deg": null,
+ "resolution": "1280x720",
+ "frames": 1799,
+ "duration_s": 60.01,
+ "fps": 29.98,
+ "dictionary": "DICT_6X6_250",
+ "created": "2026-11-16T16:53:13"
+}

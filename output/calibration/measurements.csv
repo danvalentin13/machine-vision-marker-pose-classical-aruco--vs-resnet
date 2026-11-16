@@ -1,0 +1,4 @@
+item,what,intended_mm,measured_mm,difference_mm,scale_pct,within_1mm,date
+marker_F_id0,black square side,80,77,-3,96.25,FALSE,11/10/2026
+marker_M_id23,black square side,80,77,-3,96.25,FALSE,11/10/2026
+chessboard_9x6,square side,25,24,-1,96,TRUE,11/10/2026

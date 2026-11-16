@@ -1,0 +1,13 @@
+{
+ "name": "real_v3_01",
+ "tag": "train",
+ "notes": "network training frames (real_v3): F still, M moved by hand - close, far, edges, strong tilts, in-plane rotation, free; start setup: marker planes 46.4 cm from the lens (corrected; 65 cm was a mistake), parallel to it (0 deg tilt); F left, M right; 10.8 cm between the black edges, 18.5 cm between centres; F centre 5 mm higher than M; M detached during a pause",
+ "distance_cm": 46.4,
+ "tilt_deg": 0,
+ "resolution": "1280x720",
+ "frames": 1256,
+ "duration_s": 42.01,
+ "fps": 29.9,
+ "dictionary": "DICT_6X6_250",
+ "created": "2026-11-16T11:55:44"
+}

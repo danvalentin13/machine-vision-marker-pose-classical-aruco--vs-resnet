@@ -1,0 +1,13 @@
+{
+ "name": "real_v3_02",
+ "tag": "train",
+ "notes": "network training frames (real_v3): F still, M moved by hand - close, far, edges, strong tilts, in-plane rotation, free; F fixed at 60.1 cm from the lens (measured; camera estimate 61.0 cm), on the left of the picture",
+ "distance_cm": 60.1,
+ "tilt_deg": null,
+ "resolution": "1280x720",
+ "frames": 1258,
+ "duration_s": 42.01,
+ "fps": 29.94,
+ "dictionary": "DICT_6X6_250",
+ "created": "2026-11-16T12:03:16"
+}

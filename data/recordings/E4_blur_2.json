@@ -1,0 +1,21 @@
+{
+ "name": "E4_blur_2",
+ "tag": "E4_robust",
+ "notes": "motion blur, stronger: the laptop screen (camera) wobbled quickly by hand during the recording (the markers do not move relative to each other), normal light; M left of F: centre to centre 135 mm (ruler), M 3.5 mm higher, camera ~61 cm",
+ "distance_cm": 61.0,
+ "tilt_deg": 0.0,
+ "resolution": "1280x720",
+ "frames": 150,
+ "duration_s": 5.01,
+ "fps": 29.92,
+ "dictionary": "DICT_6X6_250",
+ "created": "2026-11-16T19:44:55",
+ "camera_check": [
+  -136.0,
+  6.5,
+  3.9,
+  4.3,
+  0.2,
+  -1.3
+ ]
+}

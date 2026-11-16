@@ -1,0 +1,21 @@
+{
+ "name": "E4_cover",
+ "tag": "E4_robust",
+ "notes": "partial occlusion: the left vertical edge of M covered by a paper strip (about 20 % of the black square), normal light; M left of F: centre to centre 135 mm (ruler), M 3.5 mm higher, same plane, camera ~61 cm",
+ "distance_cm": 61.0,
+ "tilt_deg": 0.0,
+ "resolution": "1280x720",
+ "frames": 100,
+ "duration_s": 3.35,
+ "fps": 29.85,
+ "dictionary": "DICT_6X6_250",
+ "created": "2026-11-16T19:37:20",
+ "camera_check": [
+  -135.2,
+  6.3,
+  1.4,
+  3.5,
+  -0.2,
+  -1.3
+ ]
+}

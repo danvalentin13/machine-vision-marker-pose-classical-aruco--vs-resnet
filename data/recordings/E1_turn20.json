@@ -1,0 +1,21 @@
+{
+ "name": "E1_turn20",
+ "tag": "E1_static",
+ "notes": "M turned 20 deg about the vertical axis (protractor), on its own support in front of F: s 115 mm along the board, n 90 mm in front of F's surface, centre 20 mm lower (ruler, top view); F at ~61 cm, M at ~52 cm from the camera",
+ "distance_cm": 61.0,
+ "tilt_deg": 20.0,
+ "resolution": "1280x720",
+ "frames": 100,
+ "duration_s": 3.35,
+ "fps": 29.83,
+ "dictionary": "DICT_6X6_250",
+ "created": "2026-11-16T20:09:06",
+ "camera_check": [
+  -116.2,
+  -23.6,
+  88.7,
+  1.6,
+  21.2,
+  0.4
+ ]
+}

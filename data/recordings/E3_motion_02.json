@@ -1,0 +1,13 @@
+{
+ "name": "E3_motion_02",
+ "tag": "E3_motion",
+ "notes": "known motion: M on its box slides 60 mm along a ruler parallel to F's board (s 140 -> 200 mm, n 90 mm, centre 20 mm lower, facing the camera), there and back, following the moving outline: 6 s per 60 mm (1 cm/s), rests of 2 s; truth = the outline's schedule between the two marked stops; camera ~60 cm from F; T4: F still, M moved by hand (guided: left/right, closer/farther, turn, up/down, circle)",
+ "distance_cm": null,
+ "tilt_deg": null,
+ "resolution": "1280x720",
+ "frames": 601,
+ "duration_s": 20.03,
+ "fps": 30.01,
+ "dictionary": "DICT_6X6_250",
+ "created": "2026-11-16T20:45:09"
+}

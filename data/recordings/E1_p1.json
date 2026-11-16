@@ -1,0 +1,14 @@
+{
+ "name": "E1_p1",
+ "tag": "E1_static",
+ "notes": "position 1, both boards against one straight edge, M left of F",
+ "distance_cm": null,
+ "tilt_deg": null,
+ "resolution": "1280x720",
+ "frames": 100,
+ "duration_s": 3.33,
+ "fps": 30.04,
+ "dictionary": "DICT_6X6_250",
+ "created": "2026-11-15T18:00:22",
+ "recorded_by": "claude (headless, same format as t3_record.py)"
+}

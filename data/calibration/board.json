@@ -1,0 +1,7 @@
+{
+ "cols": 9,
+ "rows": 6,
+ "square_mm": 25.0,
+ "measured_square_mm": 24.0,
+ "note": "cols x rows = inner corners; replace measured_square_mm (null) by the calliper value of the PRINTED square"
+}

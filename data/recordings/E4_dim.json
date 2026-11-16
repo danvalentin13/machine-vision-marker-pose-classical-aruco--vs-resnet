@@ -1,0 +1,21 @@
+{
+ "name": "E4_dim",
+ "tag": "E4_robust",
+ "notes": "dim light; M left of F: gap between the black squares 58 mm (centre to centre 135 mm, ruler), M centre 3.5 mm higher, same plane, both facing the camera at ~61 cm; M on a white backing sheet",
+ "distance_cm": 61.0,
+ "tilt_deg": 0.0,
+ "resolution": "1280x720",
+ "frames": 100,
+ "duration_s": 3.35,
+ "fps": 29.85,
+ "dictionary": "DICT_6X6_250",
+ "created": "2026-11-16T19:32:09",
+ "camera_check": [
+  -136.0,
+  6.2,
+  1.5,
+  3.0,
+  -1.1,
+  -1.2
+ ]
+}

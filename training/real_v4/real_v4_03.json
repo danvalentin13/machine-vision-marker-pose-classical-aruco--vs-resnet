@@ -1,0 +1,13 @@
+{
+ "name": "real_v4_03",
+ "tag": "train",
+ "notes": "network training frames (real_v4): F still, M moved by hand - close, far, edges, strong tilts, in-plane rotation, free; start setup: marker plane 53 cm from the lens (measured), laptop turned 12 deg to the RIGHT (corrected; in the picture F sits left of centre) and screen pitched 12 deg inward (58 cm before turning and tilting); VALIDATION recording; camera estimate: F at 53.7 cm, seen pitched 7.4 deg and yawed 9.0 deg",
+ "distance_cm": 53.0,
+ "tilt_deg": null,
+ "resolution": "1280x720",
+ "frames": 1254,
+ "duration_s": 42.01,
+ "fps": 29.85,
+ "dictionary": "DICT_6X6_250",
+ "created": "2026-11-16T13:56:01"
+}

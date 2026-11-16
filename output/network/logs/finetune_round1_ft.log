@@ -1,0 +1,65 @@
+Task 5 - fine-tuning on real frames.  5 training recordings in C:\Study\TUIASI\MLRC\an2\sem1\Machine Vision\Lab 2\training\real_v2.  Press Enter to accept the [default].
+
+1) Stage-1 (whole-image) network to fine-tune [resnet18_v2]: 2) Stage-2 (crop) network to fine-tune [crop_resnet18_v1]: 3) Recording kept for validation (not trained on) [real_v2_05]: 4) Fine-tuning epochs [15]: 5) Learning rate (peak; low for fine-tuning) [0.0001]: 6) Show the live training window? (y/n) [y]: 
+labelling the real frames with the classical pipeline ...
+  real_v2_01: 916 of 1075 frames labelled (M detected, reprojection error <= 1.0 px)
+  real_v2_02: 774 of 1079 frames labelled (M detected, reprojection error <= 1.0 px)
+  real_v2_03: 738 of 1074 frames labelled (M detected, reprojection error <= 1.0 px)
+  real_v2_04: 736 of 1074 frames labelled (M detected, reprojection error <= 1.0 px)
+  real_v2_05: 589 of 1074 frames labelled (M detected, reprojection error <= 1.0 px)
+  real full set: 3164 train, 589 validation frames -> C:\Study\TUIASI\MLRC\an2\sem1\Machine Vision\Lab 2\training\synthetic\real_v2_full
+  real crop set: 3164 train, 589 validation frames -> C:\Study\TUIASI\MLRC\an2\sem1\Machine Vision\Lab 2\training\synthetic\real_v2_crop
+
+fine-tuning resnet18_v2 on real (full) + synthetic (synth_v1) ...
+device: cuda (NVIDIA GeForce RTX 5080 Laptop GPU)
+train 3164 images, val 589 images, (360, 640) px, data on GPU
+mixed with the synthetic set synth_v1 (10000 images): half of every batch
+starting from resnet18_v2.pt
+network: full-image network; augmentation: gain and offset; gradient clipping: off
+epoch   1/15  loss 0.3462 (rot 0.1975 trans 0.1487)  val: rot 10.21 deg (p95 20.9), trans 26.5 mm (p95 64)   0.3 min, ~4.1 min left
+epoch   2/15  loss 0.1136 (rot 0.0397 trans 0.0739)  val: rot 11.02 deg (p95 23.5), trans 43.2 mm (p95 86)   0.6 min, ~3.9 min left
+epoch   3/15  loss 0.0951 (rot 0.0287 trans 0.0663)  val: rot 9.62 deg (p95 21.2), trans 54.1 mm (p95 88)   0.9 min, ~3.6 min left
+epoch   4/15  loss 0.0894 (rot 0.0248 trans 0.0646)  val: rot 8.07 deg (p95 19.2), trans 15.3 mm (p95 42)   1.2 min, ~3.3 min left
+epoch   5/15  loss 0.0817 (rot 0.0234 trans 0.0583)  val: rot 10.64 deg (p95 21.9), trans 27.9 mm (p95 57)   1.5 min, ~3.0 min left
+epoch   6/15  loss 0.0806 (rot 0.0209 trans 0.0597)  val: rot 7.85 deg (p95 18.5), trans 23.7 mm (p95 60)   1.8 min, ~2.7 min left
+epoch   7/15  loss 0.0680 (rot 0.0192 trans 0.0488)  val: rot 8.18 deg (p95 20.3), trans 12.7 mm (p95 38)   2.1 min, ~2.4 min left
+epoch   8/15  loss 0.0683 (rot 0.0200 trans 0.0483)  val: rot 9.32 deg (p95 20.1), trans 19.5 mm (p95 53)   2.4 min, ~2.1 min left
+epoch   9/15  loss 0.0614 (rot 0.0159 trans 0.0456)  val: rot 9.60 deg (p95 21.0), trans 14.5 mm (p95 43)   2.7 min, ~1.8 min left
+epoch  10/15  loss 0.0619 (rot 0.0161 trans 0.0458)  val: rot 8.05 deg (p95 18.1), trans 10.2 mm (p95 40)   3.0 min, ~1.5 min left
+epoch  11/15  loss 0.0562 (rot 0.0152 trans 0.0410)  val: rot 8.40 deg (p95 19.8), trans 20.9 mm (p95 51)   3.3 min, ~1.2 min left
+epoch  12/15  loss 0.0532 (rot 0.0140 trans 0.0392)  val: rot 8.69 deg (p95 19.6), trans 10.9 mm (p95 35)   3.6 min, ~0.9 min left
+epoch  13/15  loss 0.0492 (rot 0.0136 trans 0.0356)  val: rot 8.58 deg (p95 19.6), trans 17.7 mm (p95 48)   3.9 min, ~0.6 min left
+epoch  14/15  loss 0.0478 (rot 0.0130 trans 0.0349)  val: rot 8.17 deg (p95 19.3), trans 11.3 mm (p95 37)   4.2 min, ~0.3 min left
+epoch  15/15  loss 0.0483 (rot 0.0140 trans 0.0343)  val: rot 8.18 deg (p95 19.1), trans 14.3 mm (p95 44)   4.5 min, ~0.0 min left
+dashboard -> C:\Study\TUIASI\MLRC\an2\sem1\Machine Vision\Lab 2\output\network\resnet18_v2_ft\dashboard.png
+
+model -> C:\Study\TUIASI\MLRC\an2\sem1\Machine Vision\Lab 2\training\models\resnet18_v2_ft.pt
+log and curves -> C:\Study\TUIASI\MLRC\an2\sem1\Machine Vision\Lab 2\output\network\resnet18_v2_ft
+
+fine-tuning crop_resnet18_v1 on real (crop) + synthetic (crop_v1) ...
+device: cuda (NVIDIA GeForce RTX 5080 Laptop GPU)
+train 3164 images, val 589 images, (224, 224) px, data on GPU
+mixed with the synthetic set crop_v1 (30000 images): half of every batch
+starting from crop_resnet18_v1.pt
+network: two-stage CROP network (grey + 2 coordinate channels), stage 1 = resnet18_v2_ft.pt; augmentation: strong (gain, offset, noise, blur); gradient clipping: 5.0
+epoch   1/15  loss 0.0646 (rot 0.0196 trans 0.0451)  val: rot 9.40 deg (p95 19.2), trans 9.5 mm (p95 31)   0.1 min, ~0.9 min left
+epoch   2/15  loss 0.0483 (rot 0.0107 trans 0.0376)  val: rot 9.24 deg (p95 18.5), trans 7.5 mm (p95 25)   0.1 min, ~0.9 min left
+epoch   3/15  loss 0.0447 (rot 0.0075 trans 0.0372)  val: rot 8.51 deg (p95 16.7), trans 7.1 mm (p95 19)   0.2 min, ~0.8 min left
+epoch   4/15  loss 0.0379 (rot 0.0054 trans 0.0324)  val: rot 8.68 deg (p95 16.9), trans 7.3 mm (p95 19)   0.3 min, ~0.7 min left
+epoch   5/15  loss 0.0369 (rot 0.0047 trans 0.0322)  val: rot 8.96 deg (p95 17.5), trans 11.3 mm (p95 34)   0.3 min, ~0.7 min left
+epoch   6/15  loss 0.0354 (rot 0.0043 trans 0.0311)  val: rot 8.09 deg (p95 16.1), trans 7.3 mm (p95 25)   0.4 min, ~0.6 min left
+epoch   7/15  loss 0.0400 (rot 0.0040 trans 0.0359)  val: rot 7.81 deg (p95 15.3), trans 10.4 mm (p95 30)   0.5 min, ~0.5 min left
+epoch   8/15  loss 0.0332 (rot 0.0038 trans 0.0294)  val: rot 8.15 deg (p95 16.0), trans 7.4 mm (p95 25)   0.5 min, ~0.5 min left
+epoch   9/15  loss 0.0323 (rot 0.0036 trans 0.0287)  val: rot 9.12 deg (p95 17.1), trans 6.1 mm (p95 19)   0.6 min, ~0.4 min left
+epoch  10/15  loss 0.0292 (rot 0.0034 trans 0.0258)  val: rot 8.31 deg (p95 16.1), trans 5.5 mm (p95 20)   0.7 min, ~0.3 min left
+epoch  11/15  loss 0.0291 (rot 0.0031 trans 0.0260)  val: rot 8.13 deg (p95 16.1), trans 7.3 mm (p95 21)   0.7 min, ~0.3 min left
+epoch  12/15  loss 0.0262 (rot 0.0029 trans 0.0233)  val: rot 8.01 deg (p95 15.9), trans 6.7 mm (p95 20)   0.8 min, ~0.2 min left
+epoch  13/15  loss 0.0282 (rot 0.0029 trans 0.0253)  val: rot 8.05 deg (p95 15.9), trans 5.6 mm (p95 19)   0.9 min, ~0.1 min left
+epoch  14/15  loss 0.0276 (rot 0.0030 trans 0.0246)  val: rot 8.20 deg (p95 16.0), trans 6.3 mm (p95 22)   0.9 min, ~0.1 min left
+epoch  15/15  loss 0.0257 (rot 0.0029 trans 0.0228)  val: rot 8.10 deg (p95 16.0), trans 6.8 mm (p95 24)   1.0 min, ~0.0 min left
+dashboard -> C:\Study\TUIASI\MLRC\an2\sem1\Machine Vision\Lab 2\output\network\crop_resnet18_v1_ft\dashboard.png
+
+model -> C:\Study\TUIASI\MLRC\an2\sem1\Machine Vision\Lab 2\training\models\crop_resnet18_v1_ft.pt
+log and curves -> C:\Study\TUIASI\MLRC\an2\sem1\Machine Vision\Lab 2\output\network\crop_resnet18_v1_ft
+
+[exited with code 0]

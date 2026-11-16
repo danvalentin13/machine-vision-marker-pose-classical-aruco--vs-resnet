@@ -1,0 +1,6 @@
+numpy>=2.0
+opencv-contrib-python>=4.7
+matplotlib>=3.8
+pillow>=10.0
+# PyTorch is installed separately (CUDA build for the RTX 50-series), see README step 1:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128

@@ -1,0 +1,14 @@
+{
+ "name": "E1_p5",
+ "tag": "E1_static",
+ "notes": "position 5, gap 250 mm, both boards against one straight edge (checked with a ruler across the fronts), M left of F; distance from the lens measured by hand: 37 cm (camera estimate to the marker centres: 42-43 cm)",
+ "distance_cm": 37.0,
+ "tilt_deg": null,
+ "resolution": "1280x720",
+ "frames": 100,
+ "duration_s": 3.33,
+ "fps": 30.06,
+ "dictionary": "DICT_6X6_250",
+ "created": "2026-11-15T18:24:48",
+ "recorded_by": "claude (headless, same format as t3_record.py)"
+}

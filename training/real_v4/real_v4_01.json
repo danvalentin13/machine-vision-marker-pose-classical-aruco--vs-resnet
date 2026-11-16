@@ -1,0 +1,13 @@
+{
+ "name": "real_v4_01",
+ "tag": "train",
+ "notes": "network training frames (real_v4): F still, M moved by hand - close, far, edges, strong tilts, in-plane rotation, free; start setup: marker plane 58 cm from the lens (measured), screen hinge 75 deg (15 deg inward from vertical), laptop not turned; camera estimate: F at 53.6 cm, seen pitched 11.8 deg and yawed 0.9 deg; the 58 cm was measured with the screen upright: tilting it 15 deg inward moves the lens ~4-5 cm toward the markers, which matches the camera estimate",
+ "distance_cm": 58.0,
+ "tilt_deg": null,
+ "resolution": "1280x720",
+ "frames": 1252,
+ "duration_s": 42.03,
+ "fps": 29.79,
+ "dictionary": "DICT_6X6_250",
+ "created": "2026-11-16T13:43:00"
+}

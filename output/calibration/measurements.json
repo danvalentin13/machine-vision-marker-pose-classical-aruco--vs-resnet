@@ -1,0 +1,35 @@
+{
+ "measurements": [
+  {
+   "item": "marker_F_id0",
+   "what": "black square side",
+   "intended_mm": 80.0,
+   "measured_mm": 77.0,
+   "difference_mm": -3.0,
+   "scale_pct": 96.25,
+   "within_1mm": false,
+   "date": "2026-11-10"
+  },
+  {
+   "item": "marker_M_id23",
+   "what": "black square side",
+   "intended_mm": 80.0,
+   "measured_mm": 77.0,
+   "difference_mm": -3.0,
+   "scale_pct": 96.25,
+   "within_1mm": false,
+   "date": "2026-11-10"
+  },
+  {
+   "item": "chessboard_9x6",
+   "what": "square side",
+   "intended_mm": 25.0,
+   "measured_mm": 24.0,
+   "difference_mm": -1.0,
+   "scale_pct": 96.0,
+   "within_1mm": true,
+   "date": "2026-11-10"
+  }
+ ],
+ "note": "calliper measurements of the printed markers and chessboard; the scripts read them from data/markers.json (measured_side_mm) and data/calibration/board.json (measured_square_mm)"
+}

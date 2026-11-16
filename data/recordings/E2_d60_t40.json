@@ -1,0 +1,21 @@
+{
+ "name": "E2_d60_t40",
+ "tag": "E2_dist_tilt",
+ "notes": "camera ~61 cm from F, M turned 40 deg; M on its own support in front of F: s 115 mm along the board, n 90 mm in front of F's surface, centre 20 mm lower (ruler); camera estimate of the distance to F: 61.4 cm",
+ "distance_cm": 61.0,
+ "tilt_deg": 40.0,
+ "resolution": "1280x720",
+ "frames": 100,
+ "duration_s": 3.32,
+ "fps": 30.14,
+ "dictionary": "DICT_6X6_250",
+ "created": "2026-11-16T20:14:15",
+ "camera_check": [
+  -110.2,
+  -23.6,
+  85.5,
+  2.9,
+  36.8,
+  1.8
+ ]
+}

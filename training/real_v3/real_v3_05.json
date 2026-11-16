@@ -1,0 +1,13 @@
+{
+ "name": "real_v3_05",
+ "tag": "train",
+ "notes": "network training frames (real_v3): F still, M moved by hand - close, far, edges, strong tilts, in-plane rotation, free; F fixed at 55 cm from the lens (measured; camera estimate 53.2 cm), laptop screen closed to about 80 deg (camera looks ~10 deg down); validation recording; camera sees F tilted 6.6 deg (up/down), the screen angle estimate was ~10 deg",
+ "distance_cm": 55.0,
+ "tilt_deg": 6.6,
+ "resolution": "1280x720",
+ "frames": 1258,
+ "duration_s": 42.03,
+ "fps": 29.93,
+ "dictionary": "DICT_6X6_250",
+ "created": "2026-11-16T12:18:40"
+}

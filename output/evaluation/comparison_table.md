@@ -1,0 +1,8 @@
+# Task 6 - comparison
+
+Real test set; median with the 95th percentile in brackets.
+
+| Method | E1 e_t [mm] | E1 e_R [deg] | E1 jitter [mm] | E3 e_t [mm] | E3 e_R [deg] | E4 output [%] | E6 [fps] |
+|---|---|---|---|---|---|---|---|
+| Classical | 7.8 (13.6) | 3.84 (6.04) | 0.55 | 6.6 (12.4) | 5.82 (9.54) | 80 | 147 |
+| Network | 8.1 (13.0) | 4.04 (6.48) | 1.29 | 6.3 (13.7) | 5.21 (7.11) | 100 | 25 |

@@ -1,0 +1,6 @@
+{
+ "dictionary": "DICT_6X6_250",
+ "grid": "6x6",
+ "n_markers": 250,
+ "note": "an id has no meaning besides its bit pattern; opencv chooses patterns that differ in many bits"
+}

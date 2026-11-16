@@ -1,0 +1,13 @@
+{
+ "name": "invariance_1",
+ "tag": "demo",
+ "notes": "check B: markers still (20 cm edge to edge), laptop moved",
+ "distance_cm": 34.0,
+ "tilt_deg": 0.0,
+ "resolution": "1280x720",
+ "frames": 1499,
+ "duration_s": 50.14,
+ "fps": 29.9,
+ "dictionary": "DICT_6X6_250",
+ "created": "2026-11-15T17:32:22"
+}

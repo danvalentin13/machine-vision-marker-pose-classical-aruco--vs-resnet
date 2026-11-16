@@ -1,0 +1,42 @@
+patched
+syntax ok
+0
+Task 5 - fine-tuning on real frames.  17 training recordings in real_v2, real_v3, real_v4; the new networks get the suffix _ft3.  Press Enter to accept the [default].
+
+
+training recordings:   real_v2_01, real_v2_02, real_v2_03, real_v2_04, real_v3_01, real_v3_02, real_v3_03, real_v3_04, real_v4_01, real_v4_02, real_v4_04, real_v4_05, real_v4_06
+validation recordings: real_v2_05, real_v3_05, real_v4_03, real_v4_07
+
+step 1 - labelling the real frames with the classical pipeline ...
+  real_v2_01: 916 labels reused from labels/real_v2_01_labels.npz
+  real_v2_02: 774 labels reused from labels/real_v2_02_labels.npz
+  real_v2_03: 738 labels reused from labels/real_v2_03_labels.npz
+  real_v2_04: 736 labels reused from labels/real_v2_04_labels.npz
+  real_v2_05: 589 labels reused from labels/real_v2_05_labels.npz
+  real_v3_01: 882 labels reused from labels/real_v3_01_labels.npz
+  real_v3_02: 1114 labels reused from labels/real_v3_02_labels.npz
+  real_v3_03: 879 labels reused from labels/real_v3_03_labels.npz
+  real_v3_04: 730 labels reused from labels/real_v3_04_labels.npz
+  real_v3_05: 930 labels reused from labels/real_v3_05_labels.npz
+  real_v4_01: 773 of 1252 frames labelled (M detected, reprojection error <= 1 px)
+  real_v4_02: 1111 of 1254 frames labelled (M detected, reprojection error <= 1 px)
+  real_v4_03: 1130 of 1254 frames labelled (M detected, reprojection error <= 1 px)
+  real_v4_04: 749 of 1256 frames labelled (M detected, reprojection error <= 1 px)
+  real_v4_05: 938 of 1260 frames labelled (M detected, reprojection error <= 1 px)
+  real_v4_06: 1222 of 1260 frames labelled (M detected, reprojection error <= 1 px)
+  real_v4_07: 1076 of 1254 frames labelled (M detected, reprojection error <= 1 px)
+step 2 - building the real data sets ...
+  real full set: 11562 train, 3725 validation frames -> C:\Study\TUIASI\MLRC\an2\sem1\Machine Vision\Lab 2\training\synthetic\real_v2_real_v3_real_v4_full
+  real crop set: 11562 train, 3725 validation frames -> C:\Study\TUIASI\MLRC\an2\sem1\Machine Vision\Lab 2\training\synthetic\real_v2_real_v3_real_v4_crop
+
+step 3 - fine-tuning resnet18_v2 -> resnet18_v2_ft3 on real (full) + synthetic (synth_v1) ...
+device: cuda (NVIDIA GeForce RTX 5080 Laptop GPU)
+train 11562 images, val 3725 images, (360, 640) px, data on GPU
+mixed with the synthetic set synth_v1 (10000 images): half of every batch
+starting from resnet18_v2.pt
+network: full-image network; augmentation: gain and offset + camera turned up to 8 deg (roll 10) + hard cases in 40 % (cover, motion blur, low resolution, dim light); gradient clipping: off
+   best so far: epoch 1 (validation rot 11.28 deg, trans 31.3 mm)
+epoch   1/25  loss 0.5984 (rot 0.4094 trans 0.1891)  val: rot 11.28 deg (p95 25.7), trans 31.3 mm (p95 124)   1.7 min, ~40.1 min left
+epoch   2/25  loss 0.3517 (rot 0.2323 trans 0.1195)  val: rot 7.83 deg (p95 20.0), trans 44.5 mm (p95 96)   2.9 min, ~33.8 min left
+
+[killed]

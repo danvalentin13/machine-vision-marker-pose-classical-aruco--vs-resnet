@@ -1,0 +1,13 @@
+{
+ "name": "E7_box_5cms_2",
+ "tag": "E7_occlusion",
+ "notes": "LAYOUT 2 (centre to centre 325 mm at the start, travel ~228 mm), obstacle: light-bulb box (7 cm), ~6 cm run-up, M not readable over ~16 cm; countdown 3-2-1 then the moving outline: 4.6 s per pass = 5 cm/s (hidden ~3.2 s); second slow set; camera ~60 cm from F; bonus E7: F still, M slides along the ruler from the left stop to the right stop (rest - slide - rest), several passes",
+ "distance_cm": null,
+ "tilt_deg": null,
+ "resolution": "1280x720",
+ "frames": 2851,
+ "duration_s": 95.02,
+ "fps": 30.0,
+ "dictionary": "DICT_6X6_250",
+ "created": "2026-11-16T18:22:46"
+}
