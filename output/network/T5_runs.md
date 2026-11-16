@@ -133,3 +133,5 @@ marker (30 % covered, strong motion blur) classical gives nothing and _ft3 still
 the hard-case augmentation is what makes the difference (_ft2: 51 % / 14 %). Very dark frames (light x 0.10) defeat both.
 Caveats: the degradations are simulated and of the same kind as the training augmentation; the reference there is the classical
 pose, not the ruler truth. Real hard-case test recordings (covered, shaken, dim) are still to be made for T6.
+
+> CORRECTION (2026-11-16, paper audit): a chordal rotation loss of 0.0145 corresponds to 4.9 deg (4 (1 - cos theta) = loss), not 'about 3.5 deg' as written above.

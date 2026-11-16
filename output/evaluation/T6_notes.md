@@ -49,3 +49,5 @@ E1_turn20/40 and all of E2, E3, E4 were recorded after the network was final. Me
 | E1 untouched only (E1_turn20/40) | network | 11.8 (13.8) | 5.46 (6.70) | 1.36 |
 | all untouched static (E1_turn + E2, 8 recordings) | classical | 8.0 (9.0) | 3.97 (4.69) | 0.96 |
 | all untouched static (E1_turn + E2, 8 recordings) | network | 11.5 (25.6) | 4.47 (10.37) | 1.90 |
+
+> CORRECTION (2026-11-16, paper audit): in E3 the hand is behind the guide outline by 0.6-1.0 s (median) and up to 2.0 s (20 mm) on the way back, not '0.0-0.5 s / 2-5 mm' as written above (`python paper/extra_checks.py lag`). E5 as evaluated here uses the 640x360 test split; at full resolution the classical pipeline has 1.6 mm / 0.11 deg and the network 6.8 mm / 1.85 deg (`paper/data/e5_full.json`).

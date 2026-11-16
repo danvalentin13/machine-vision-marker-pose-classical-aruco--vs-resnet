@@ -1,0 +1,98 @@
+{
+ "sl_setup.png": [
+  200,
+  13.0
+ ],
+ "sl_t2.png": [
+  200,
+  13.0
+ ],
+ "sl_pipeline.png": [
+  200,
+  13.0
+ ],
+ "sl_calib.png": [
+  200,
+  13.0
+ ],
+ "sl_t3.png": [
+  200,
+  13.0
+ ],
+ "sl_t4.png": [
+  200,
+  13.0
+ ],
+ "sl_network.png": [
+  200,
+  13.0
+ ],
+ "sl_arch.png": [
+  200,
+  13.0
+ ],
+ "sl_data.png": [
+  200,
+  13.0
+ ],
+ "sl_synth.png": [
+  200,
+  13.0
+ ],
+ "sl_twostage.png": [
+  200,
+  13.0
+ ],
+ "sl_finetune.png": [
+  200,
+  13.0
+ ],
+ "sl_rounds.png": [
+  200,
+  13.0
+ ],
+ "sl_e1.png": [
+  200,
+  13.0
+ ],
+ "sl_e2.png": [
+  200,
+  13.0
+ ],
+ "sl_e3.png": [
+  200,
+  13.0
+ ],
+ "sl_e4.png": [
+  200,
+  13.0
+ ],
+ "sl_cdf.png": [
+  200,
+  13.0
+ ],
+ "sl_bonus_a.png": [
+  200,
+  13.0
+ ],
+ "sl_bonus_b.png": [
+  200,
+  13.0
+ ],
+ "sl_margin.png": [
+  200,
+  13.0
+ ],
+ "eq_pose.png": [
+  200,
+  20.0
+ ],
+ "eq_net.png": [
+  200,
+  20.0
+ ],
+ "eq_kalman.png": [
+  200,
+  20.0
+ ]
+}

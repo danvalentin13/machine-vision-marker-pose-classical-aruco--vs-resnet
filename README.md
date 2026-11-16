@@ -15,6 +15,26 @@ Every step of the project, in the order it is done. Each step has **one command 
 - Animations without any camera picture (3D view and curves only) are in `output\public\`; `python make_public_media.py` makes them.
 - Steps that need a recording or a network therefore run only after you record or train your own (steps 3-5).
 
+## Quick start on any computer (live view in five commands)
+
+Windows PowerShell, in the folder where you cloned or unzipped the project (Python 3.10 or newer must be installed):
+```
+python -m venv .venv
+```
+```
+.venv\Scripts\Activate.ps1
+```
+```
+python -m pip install -r requirements.txt
+```
+```
+python -m pip install torch torchvision
+```
+```
+python live.py
+```
+On Linux / macOS the second command is `source .venv/bin/activate`. The fourth installs PyTorch for the processor; it is needed only for the network (red outline) and can be skipped: the live view then runs with the classical pipeline and the predictor. With an NVIDIA RTX 50-series card use the CUDA build of step 0.4 instead. `python live.py` checks the set-up first (packages, markers, calibration, network), generates the markers if they are missing, and says what is missing and how to fix it. The trained networks are not in the repository (size): copy `training\models\*.pt` from the team, or train them (steps 5.1 - 5.6). The calibration in `data\calibration` belongs to the laptop camera used in the project; on another camera recalibrate (steps 3.1 - 3.2) for real distances.
+
 ## Contents
 
 | Part | Steps |
@@ -27,6 +47,7 @@ Every step of the project, in the order it is done. Each step has **one command 
 | T5 network | [5.1](#step-51---synthetic-data-set) [5.2](#step-52---train-the-whole-image-network-stage-1) [5.3](#step-53---crop-data-set) [5.4](#step-54---train-the-crop-network-stage-2) [5.5](#step-55---record-the-real-training-frames) [5.6](#step-56---fine-tune-both-networks-on-real--synthetic-frames) [5.7](#step-57---test-the-networks-on-real-recordings) [5.8](#step-58---test-on-degraded-frames) |
 | T6 comparison | [6.1](#step-61---live-check-of-a-placement) [6.2](#step-62---record-the-static-test-recordings-e1-e2-e4) [6.3](#step-63---record-the-known-motion-e3) [6.4](#step-64---run-the-comparison-e1-e6) [6.5](#step-65---both-methods-side-by-side-video) [6.6](#step-66---t4-animation-with-the-networks-poses) |
 | Bonus | [7.1](#step-71---live-check-of-the-occlusion-set-up) [7.2](#step-72---record-passes-without-the-obstacle) [7.3](#step-73---record-passes-behind-the-obstacle) [7.4](#step-74---measure-the-passes-of-a-recording) [7.5](#step-75---predictor-on-the-uncovered-passes-hidden-in-software) [7.6](#step-76---predictor-behind-the-real-obstacle) [7.7](#step-77---animation-with-the-predicted-pose) [7.8](#step-78---live-classical-pipeline--predictor) |
+| All at once | [8.1](#step-81---live-classical-network-and-predictor-together) |
 | Reference | [Folders](#folders) - [Results: where each number comes from](#results-where-each-number-comes-from) - [Rules](#rules-from-the-assignment) |
 
 ---
@@ -34,7 +55,7 @@ Every step of the project, in the order it is done. Each step has **one command 
 ## Setup
 
 ### Step 0.1 - Open the project folder
-Every new terminal starts here.
+Every new terminal starts in the project folder (the one that contains `code`, `data` and this README). On the computer of this project it is the folder below; elsewhere use your own path.
 ```
 cd "C:\Study\TUIASI\MLRC\an2\sem1\Machine Vision\Lab 2"
 ```
@@ -52,13 +73,13 @@ OpenCV (with ArUco), NumPy, Matplotlib, Pillow.
 ```
 
 ### Step 0.4 - Install PyTorch with CUDA (once)
-The CUDA 12.8 build for the RTX 5080 (training and the network).
+The CUDA 12.8 build for the RTX 5080 (training and the network). Without an NVIDIA card: `.venv\Scripts\python.exe -m pip install torch torchvision` (processor only: the network runs, training is very slow).
 ```
 .venv\Scripts\python.exe -m pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
 ```
 
 ### Step 0.5 - Activate the venv
-Every new terminal; the prompt then starts with `(.venv)`. If PowerShell blocks it: `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned`, then repeat.
+Every new terminal; the prompt then starts with `(.venv)`. If PowerShell blocks it: `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned`, then repeat. Linux / macOS: `source .venv/bin/activate`.
 ```
 .venv\Scripts\Activate.ps1
 ```
@@ -69,6 +90,8 @@ All commands below run here.
 cd code
 ```
 
+All numbered commands below are run inside `code`. If you see `can't open file ... No such file or directory`, you are in the wrong folder: do this step again. Only `python live.py` (step 8.1) works from both folders.
+
 ### Step 0.7 - Check the folders
 Prints `DATA_DIR`, `OUTPUT_DIR`, `TRAINING_DIR`; they must end in `Lab 2\data`, `Lab 2\output`, `Lab 2\training`. All paths are defined in this one file.
 ```
@@ -76,15 +99,15 @@ python config.py
 ```
 
 ### Step 0.8 - Self-test without hardware
-Runs the whole classical pipeline on simulated data in a temporary folder (about 1 minute); prints PASS / FAIL per check.
+Runs the marker, calibration and pose checks of the classical pipeline on simulated data in a temporary folder (under a minute); prints PASS / FAIL per check.
 ```
-python selftest.py
+python selftest.py --quick
 ```
 
 ### Step 0.9 - Self-test of the network code
-Checks the synthetic renderer, the rotation output, the loss and a throw-away training run.
+The same self-test plus the network code: the synthetic renderer, the rotation output, the loss and a throw-away training run.
 ```
-python selftest_learned.py
+python selftest.py
 ```
 
 ---
@@ -372,6 +395,24 @@ python t7_animate.py E7_box_5cms_2 --start 37.5 --seconds 50 --gif
 Free motion on the camera: green = measured, red box = predicted while M is hidden, plots of position and angles with the predicted stretches shaded.
 ```
 python t7_live.py
+```
+
+---
+
+## Everything at once (live)
+
+### Step 8.1 - Live: classical, network and predictor together
+Works from the project folder or from `code`. Checks the set-up first (packages, markers, calibration, network), generates the markers if they are missing, then opens the camera window: GREEN = classical, RED = network, BLUE = occlusion predictor; on the right x, y, z, roll, pitch, yaw of M in F and the distances, live. Keys: `S` screenshot, `N` network on / off, `C` restart predictor, `Q` quit. Script: `live.py`, which opens `code\t8_live_all.py`.
+```
+python live.py
+```
+Only the checks, no camera:
+```
+python live.py --check
+```
+The same window on a recording instead of the camera:
+```
+python live.py --video E4_cover
 ```
 
 ---
